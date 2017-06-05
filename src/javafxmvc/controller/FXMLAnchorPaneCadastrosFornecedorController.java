@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -66,6 +67,8 @@ public class FXMLAnchorPaneCadastrosFornecedorController implements Initializabl
     @FXML
     private Label FornecedorTelefone;
 
+    @FXML
+    private Button aaa;
     
     @FXML
     private List<Fornecedor> listFornecedor;
@@ -85,7 +88,19 @@ public class FXMLAnchorPaneCadastrosFornecedorController implements Initializabl
         tableViewFornecedor.getSelectionModel().selectedItemProperty().addListener(
         (observable,oldValue,newValue) -> selecionarItemTableViewFornecedor(newValue));
     }    
-    
+   
+    /*
+    //TESTE BOTÂO SAIR
+    @FXML
+    public void handleBtnCancelar(ActionEvent event) throws IOException{
+        Button closeBtn = (Button)event.getSource();
+        Scene btnscene = closeBtn.getScene();
+        
+        AnchorPane a = (AnchorPane)btnscene.lookup("#anchorPane");
+        a.getChildren().remove(a);
+    }
+    */
+
     public void carregarTableVielFornecedor(){
         //configura as colunas para exibir o nome e cpf na tabela (TableView)
         tableColumnFornecedorNome.setCellValueFactory(new PropertyValueFactory<>("fantasia"));

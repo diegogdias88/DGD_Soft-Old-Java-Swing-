@@ -119,6 +119,7 @@
                   <Button fx:id="btnExcluir" layoutX="838.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleBtnExcluir" text="Excluir" />
                   <Button fx:id="btnAlterar" layoutX="775.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleBtnAlterar" text="Alterar" />
                   <Button fx:id="btnInserir" layoutX="712.0" layoutY="421.0" mnemonicParsing="false" onAction="#handleBtnInserir" text="Inserir" />
+                  <Button fx:id="aaa" layoutX="29.0" layoutY="396.0" mnemonicParsing="false" onAction="#handleBtnCancelar" text="TesteSAir" />
                </children></AnchorPane>
         </items>
       </SplitPane>
