@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLAnchorPaneCadastrosFornecedorDialogController">
+   <children>
+      <Label layoutX="40.0" layoutY="53.0" text="Nome" />
+      <Label layoutX="42.0" layoutY="284.0" text="Telefone" />
+      <Label layoutX="43.0" layoutY="114.0" text="Est. Civil" />
+      <Label layoutX="43.0" layoutY="172.0" text="Endereço" />
+      <Label layoutX="42.0" layoutY="228.0" text="Bairro" />
+   </children>
+</AnchorPane>

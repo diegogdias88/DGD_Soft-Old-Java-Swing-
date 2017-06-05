@@ -1,65 +1,24 @@
+
 package javafxmvc.controller;
 
 import java.net.URL;
 import java.sql.Connection;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafxmvc.model.dao.CidEstDao;
 import javafxmvc.model.database.Database;
 import javafxmvc.model.database.DatabaseFactory;
-import javafxmvc.model.domain.Cliente;
+import javafxmvc.model.domain.Fornecedor;
 
-public class FXMLAnchorPaneCadastrosClientesDialogController implements Initializable {
+public class FXMLAnchorPaneCadastrosFornecedorDialogController implements Initializable {
 
-     @FXML
-    private TextField ClienteNome;
-    @FXML
-    private ComboBox boxSexo;
-    @FXML
-    private ComboBox boxNacionalidade;
-    @FXML
-    private ComboBox boxEstCivil;
-    @FXML
-    private TextField ClienteCPF;
-    @FXML
-    private TextField ClienteRG;
-    @FXML
-    private TextField ClienteNasc;
-    @FXML
-    private TextField ClienteEnd;
-    @FXML
-    private TextField ClienteNumero;
-    @FXML
-    private TextField ClienteComp;
-    @FXML
-    private TextField ClienteBairro;
-    @FXML
-    private ComboBox boxUF;
-    @FXML
-    private ComboBox boxCidade;
-    @FXML
-    private TextField ClienteTelefone;
-    @FXML
-    private TextField ClienteCelular;
-    @FXML
-    private TextField ClienteEmail;
-    @FXML
-    private Button btnConfirmar;
-    @FXML
-    private Button btnCancelar;
+    
     
     private Stage dialogStage;
     private boolean btnConfirmarClicked = false;
-    private Cliente cliente;
+    private Fornecedor fornecedor;
     
     //OBJETOS UTILIZADOS
     private String uf;
@@ -72,15 +31,11 @@ public class FXMLAnchorPaneCadastrosClientesDialogController implements Initiali
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        cidestDao.setConnection(connection);
-        
-        carregarEstado();
-        carregarEstCivil();
-        carregaSexo();
-        CarregaPais();
-    }
-
-    //CONVERTE UMA STRING EM FORMATO DATE
+        // TODO
+    }    
+    
+    /*
+    	//CONVERTE UMA STRING EM FORMATO DATE
     public static java.sql.Date formataData(String data) throws Exception {
         if (data == null || data.equals("")) {
             return null;
@@ -94,21 +49,8 @@ public class FXMLAnchorPaneCadastrosClientesDialogController implements Initiali
         }
         return date;
     }
-    //CARREGA Estado Civil na ComboBox
-    public void carregarEstCivil(){
-        boxEstCivil.getItems().add("Solteiro");
-        boxEstCivil.getItems().add("Casado");
-        boxEstCivil.getItems().add("Divorciado");
-        boxEstCivil.getItems().add("Amaziado");
-    }
-    
-    //carrega sexo na combobox
-    public void carregaSexo(){
-        boxSexo.getItems().add("Masculino");
-        boxSexo.getItems().add("Feminino");
-    }
-    
-    //Carregar paises na ComboBox
+	
+	//Carregar paises na ComboBox
     public void CarregaPais(){
         List<String> listaPais = cidestDao.listaPais();
         listaPais.forEach((nomePais) -> {
@@ -156,7 +98,7 @@ public class FXMLAnchorPaneCadastrosClientesDialogController implements Initiali
         if("Tocantins".equals(boxUF.valueProperty().get()) ) estado = "TO";
         return estado;
     }
-    
+	*/
     public Stage getDialogStage() {
         return dialogStage;
     }
@@ -173,21 +115,21 @@ public class FXMLAnchorPaneCadastrosClientesDialogController implements Initiali
         this.btnConfirmarClicked = btnConfirmarClicked;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Fornecedor getFornecedor() {
+        return fornecedor;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
         
-        this.ClienteNome.setText(cliente.getNome());
-        this.ClienteCPF.setText(cliente.getCpf());
-        this.ClienteRG.setText(cliente.getRg());
-        this.ClienteEnd.setText(cliente.getEnd());
+        //this.ClienteNome.setText(cliente.getNome());
+        //this.ClienteCPF.setText(cliente.getCpf());
+        //this.ClienteRG.setText(cliente.getRg());
+        //this.ClienteEnd.setText(cliente.getEnd());
         //cidade
-        this.ClienteBairro.setText(cliente.getBairro());
+        //this.ClienteBairro.setText(cliente.getBairro());
         //buxuf
-        this.ClienteTelefone.setText(cliente.getTelefone());
+        //this.ClienteTelefone.setText(cliente.getTelefone());
         //IMAGEM
         //boxSexo
         //boxNacionalidade
@@ -202,14 +144,14 @@ public class FXMLAnchorPaneCadastrosClientesDialogController implements Initiali
     
     @FXML
     public void handleBtnConfirmar() throws Exception{
-        cliente.setNome(ClienteNome.getText());
-        cliente.setCpf(ClienteCPF.getText());
-        cliente.setRg(ClienteRG.getText());
-        cliente.setEnd(ClienteEnd.getText());
+        //cliente.setNome(ClienteNome.getText());
+        //cliente.setCpf(ClienteCPF.getText());
+        //cliente.setRg(ClienteRG.getText());
+        //cliente.setEnd(ClienteEnd.getText());
         //cidade
-        cliente.setBairro(ClienteBairro.getText());
+        //cliente.setBairro(ClienteBairro.getText());
         //boxUF
-        cliente.setTelefone(ClienteTelefone.getText());
+        //cliente.setTelefone(ClienteTelefone.getText());
         //IMAGEM
         //boxSexo
         //boxNacionalidade
